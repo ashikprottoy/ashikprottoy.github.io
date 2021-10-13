@@ -6,7 +6,7 @@
     "eject": "react-scripts eject",
     "build:css": "postcss ./assets/style/tailwind.css -o ./assets/style/main.css",
     "build:watch": "postcss ./assets/style/tailwind.css -o ./assets/style/main.css --watch",
-    "purged:css": "npx tailwind -o ./assets/style/main.css --jit --purge './**/*.html' -w"
+    "purged:css": "npx tailwind -o ./assets/style/main.css --jit --purge './**/*.html' "
   },
   "dependencies": {
     "autoprefixer": "^10.3.6",
