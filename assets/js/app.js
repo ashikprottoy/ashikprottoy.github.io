@@ -1,6 +1,19 @@
 const bars = document.querySelectorAll("#first-bar");
 const mainBar = document.querySelector("#main-bar");
 
+/* Progress bar */
+let scrollTop = window.scrollY;
+let viewportHeight = document.body.clientHeight - window.innerHeight;
+let scrollPercent = (scrollTop / viewportHeight) * 100;
+let progressBar = document.querySelector("#js-progressbar");
+
+window.addEventListener("scroll", function () {
+  scrollTop = window.scrollY;
+  viewportHeight = document.body.clientHeight - window.innerHeight;
+  scrollPercent = (scrollTop / viewportHeight) * 100;
+  progressBar.style.width = scrollPercent + "%";
+});
+
 // mainBar.addEventListener("click", (e) => {
 //   if (mainBar.classList.contains("cc")) {
 //     for (let i = 0; i < bars.length; i++) {
