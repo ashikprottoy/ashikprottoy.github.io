@@ -196,7 +196,7 @@ $(document).ready(function () {
 //add active class on nav item
 
 // const item = document.querySelectorAll(".nav-item");
-// const itemSmall = document.querySelectorAll(".nav-item-small");
+   const itemSmall = document.querySelectorAll(".nav-item-small");
 
 // item.forEach((b) => {
 //   b.addEventListener("click", (e) => {
@@ -206,13 +206,17 @@ $(document).ready(function () {
 // });
 // item[0].click();
 
-// itemSmall.forEach((b) => {
-//   b.addEventListener("click", (e) => {
-//     itemSmall.forEach((el) => el.classList.remove("font-bold"));
-//     b.classList.add("font-bold");
-//   });
-// });
-// itemSmall[0].click();
+  itemSmall.forEach((b) => {
+    b.addEventListener("click", (e) => {
+      itemSmall.forEach((el) => el.classList.remove("font-bold"));
+      b.classList.add("font-bold");
+      if (menu.classList.contains("left-0")) {
+        menu.classList.remove("left-0");
+        menu.classList.add("-left-full");
+      }
+    });
+  });
+  itemSmall[0].click();
 
 // scroll animation
 AOS.init({
